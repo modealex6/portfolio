@@ -17,13 +17,33 @@ python -m http.server 4173
 ```
 index.html                  ← كل نص عربي موجود هنا (المصدر الأساسي)
 assets/css/style.css        ← نظام التصميم كامل (ملف واحد لـ RTL و LTR)
+assets/css/print.css        ← طبقة الطباعة فقط (A4، خلفية بيضاء، عمود واحد)
 assets/js/main.js           ← اللغة، القائمة، الـ canvas، الميلان، الكشف، الساعة
 content/en.js               ← كل نص إنجليزي في مكان واحد
+mohammed-nabil-portfolio-ar.pdf
+mohammed-nabil-portfolio-en.pdf
 assets/fonts/               ← Alexandria + IBM Plex Sans Arabic + JetBrains Mono (woff2)
 assets/img/favicon.svg
 robots.txt
 brief.md  design.md  launch-checklist.md
 ```
+
+## نسخة PDF
+
+نسختان جاهزتان في جذر المستودع: `mohammed-nabil-portfolio-ar.pdf` (4 صفحات) و`mohammed-nabil-portfolio-en.pdf` (5 صفحات). النص داخلهما قابل للتحديد والبحث، والخطوط مدمجة، ومقاس A4.
+
+بعد أي تعديل على المحتوى، أعد توليدهما (يتطلب Chrome + خادمًا محليًا على 4173):
+
+```powershell
+$chrome = "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+foreach ($l in @("ar","en")) {
+  & $chrome --headless=new --disable-gpu --no-pdf-header-footer `
+    --run-all-compositor-stages-before-draw --virtual-time-budget=9000 `
+    --print-to-pdf="$PWD\mohammed-nabil-portfolio-$l.pdf" "http://localhost:4173/?lang=$l"
+}
+```
+
+ترقيم الصفحات يُضاف بعد التوليد (Chrome لا يدعم `@page` margin boxes). كل تنسيق الطباعة في `assets/css/print.css` وحدها، ولا يمسّ شكل الموقع على الشاشة.
 
 ## كيف تعدّل المحتوى
 
@@ -63,6 +83,10 @@ git push
 كل دفعة إلى `main` تُعيد النشر تلقائيًا خلال دقيقة تقريبًا.
 
 بدائل: Cloudflare Pages أو Netlify — اسحب المجلد كما هو.
+
+**مرآة ثانية (لو حُجب github.io على شبكة معيّنة):**
+https://raw.githack.com/modealex6/portfolio/811d66a/index.html
+نسخة مثبّتة على رقم الـcommit — لا تتحدّث تلقائيًا، غيّر `811d66a` إلى آخر commit عند الحاجة.
 
 ## الفحص
 راجع `launch-checklist.md`: جدول نتائج الفحص الفعلي، وما لم يُفحص بعد.
