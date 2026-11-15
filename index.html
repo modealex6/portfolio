@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>محمد نبيل — نظم معلومات إدارية وذكاء اصطناعي</title>
+<meta name="description" content="محمد نبيل: طالب نظم معلومات إدارية، بانٍ للحلول التقنية والذكاء الاصطناعي، ومهتم بإدارة المشاريع. حيث تلتقي الأعمال بالتقنية.">
+<meta name="theme-color" content="#07080d">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="website">
+<meta property="og:title" content="محمد نبيل — حيث تلتقي الأعمال بالتقنية">
+<meta property="og:description" content="نظم معلومات إدارية · ذكاء اصطناعي · إدارة مشاريع.">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/alex-ar-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-ar-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="a11y.skip">تخطَّ إلى المحتوى</a>
+
+<canvas id="lattice" class="lattice" aria-hidden="true"></canvas>
+
+<header class="topbar">
+  <a class="brand" href="#home">
+    <span class="brand-mark" aria-hidden="true">MN</span>
+    <span class="brand-text">
+      <span class="brand-name" data-i18n="brand.name">محمد نبيل</span>
+      <span class="brand-role" data-i18n="brand.role">MIS · AI</span>
+    </span>
+  </a>
+
+  <div class="topbar-actions">
+    <div class="lang" role="group" aria-label="تغيير اللغة" data-i18n-aria="lang.label">
+      <button type="button" class="lang-btn is-active" data-lang-btn="ar" aria-pressed="true">AR</button>
+      <span class="lang-sep" aria-hidden="true">/</span>
+      <button type="button" class="lang-btn" data-lang-btn="en" aria-pressed="false">EN</button>
+    </div>
+    <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="menu" aria-label="فتح القائمة" data-i18n-aria="nav.openMenu">
+      <span class="menu-bars" aria-hidden="true"><span></span><span></span></span>
+      <span data-i18n="nav.menu">القائمة</span>
+    </button>
+  </div>
+</header>
+
+<div class="menu" id="menu" hidden>
+  <div class="menu-inner">
+    <nav class="menu-nav" aria-label="أقسام الموقع" data-i18n-aria="menu.label">
+      <a href="#home"><span class="menu-idx">01</span><span class="menu-label" data-i18n="nav.home">الرئيسية</span></a>
+      <a href="#about"><span class="menu-idx">02</span><span class="menu-label" data-i18n="nav.about">عني</span></a>
+      <a href="#skills"><span class="menu-idx">03</span><span class="menu-label" data-i18n="nav.skills">المهارات</span></a>
+      <a href="#projects"><span class="menu-idx">04</span><span class="menu-label" data-i18n="nav.projects">المشاريع</span></a>
+      <a href="#experience"><span class="menu-idx">05</span><span class="menu-label" data-i18n="nav.experience">الخبرة</span></a>
+      <a href="#education"><span class="menu-idx">06</span><span class="menu-label" data-i18n="nav.education">التعليم</span></a>
+      <a href="#contact"><span class="menu-idx">07</span><span class="menu-label" data-i18n="nav.contact">التواصل</span></a>
+    </nav>
+    <div class="menu-foot">
+      <a class="menu-mail" href="mailto:mnjalhabshim633@gmail.com" dir="ltr">mnjalhabshim633@gmail.com</a>
+      <p class="menu-meta"><span data-i18n="hero.meta2">اليمن</span> · <span class="mono">2026</span></p>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ══════════ 01 · HERO ══════════ -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <p class="hero-meta mono">
+        <span data-i18n="hero.meta1">MIS · 2026</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span data-i18n="hero.meta2">اليمن</span>
+        <span class="dot" aria-hidden="true"></span>
+        <span class="hero-live"><span class="pulse" aria-hidden="true"></span><span data-i18n="hero.meta3">متاح للفرص</span></span>
+      </p>
+
+      <h1 class="hero-name">
+        <span class="hero-line"><span class="hero-word" data-i18n="hero.word1">محمد</span></span>
+        <span class="hero-line"><span class="hero-word hero-word--outline" data-i18n="hero.word2">نبيل</span></span>
+      </h1>
+
+      <div class="hero-lower">
+        <p class="hero-role" data-i18n="hero.role">نظم معلومات إدارية · ذكاء اصطناعي · إدارة مشاريع</p>
+        <p class="hero-statement" data-i18n="hero.statement">أبني عند تقاطع الأعمال والتقنية: أنظمة تُفهم، وأدوات تُستخدم، وقرارات أوضح.</p>
+      </div>
+
+      <div class="hero-foot">
+        <a class="scroll-cue" href="#about">
+          <span class="scroll-cue-line" aria-hidden="true"></span>
+          <span class="mono" data-i18n="hero.scroll">انزل</span>
+        </a>
+        <p class="hero-sig mono" aria-hidden="true">BUSINESS × TECHNOLOGY</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 02 · ABOUT ══════════ -->
+  <section class="section section--about" id="about">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <h2 data-i18n="about.title">أعمل حيث تُترجم الفكرة إلى نظام.</h2>
+        <p class="lead" data-i18n="about.lead">الإدارة والتقنية ليسا مسارين منفصلين: النظام الناجح يبدأ بفهم العمل، وينتهي بأداة ينفّذه.</p>
+      </header>
+
+      <div class="about-grid">
+        <div class="about-copy" data-reveal>
+          <p class="about-lede" data-i18n="about.p1">طالب في تخصص نظم المعلومات الإدارية (MIS)، أدرس كيف تُبنى الأنظمة التي تدير المؤسسات، وكيف تتحوّل العمليات إلى قرارات أوضح.</p>
+          <p data-i18n="about.p2">إلى جانب الدراسة أبني مشاريع تجمع إدارة المشاريع بالذكاء الاصطناعي: أنظمة إدارة، تطبيقات مالية، مساحات عمل تعتمد على وكلاء ذكاء اصطناعي، وأتمتة لسير العمل عبر <bdi dir="ltr" class="latin">n8n</bdi>.</p>
+          <p data-i18n="about.p3">أتعلم البرمجة عمليًا — <bdi dir="ltr" class="latin">C#</bdi> و<bdi dir="ltr" class="latin">Python</bdi> — وأستخدم <bdi dir="ltr" class="latin">OpenCode</bdi> و<bdi dir="ltr" class="latin">Git</bdi> يوميًا، مع اهتمام خاص بصياغة التعليمات كأداة لتحويل الفكرة إلى مخرج دقيق.</p>
+        </div>
+
+        <figure class="portrait" data-reveal>
+          <!-- استبدل هذا الإطار بصورة: <img src="assets/img/profile.jpg" alt="محمد نبيل" width="800" height="1000"> -->
+          <div class="portrait-frame" aria-hidden="true">
+            <span class="portrait-mark latin">MN</span>
+            <span class="portrait-grid"></span>
+          </div>
+          <figcaption>
+            <span class="mono">PORTRAIT / 04:05</span>
+            <span class="portrait-hint" data-i18n="portrait.hint">مكان الصورة الشخصية</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <dl class="facts" data-reveal>
+        <div><dt class="mono" data-i18n="about.f1.k">الموقع</dt><dd data-i18n="about.f1.v">اليمن</dd></div>
+        <div><dt class="mono" data-i18n="about.f2.k">التخصص</dt><dd data-i18n="about.f2.v">نظم معلومات إدارية</dd></div>
+        <div><dt class="mono" data-i18n="about.f3.k">الحالة</dt><dd data-i18n="about.f3.v">طالب · أبني مشاريع</dd></div>
+        <div><dt class="mono" data-i18n="about.f4.k">اللغات</dt><dd data-i18n="about.f4.v">العربية · الإنجليزية</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ══════════ 03 · SKILLS ══════════ -->
+  <section class="section section--skills" id="skills">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <h2 data-i18n="skills.title">أدوات العمل</h2>
+        <p class="lead" data-i18n="skills.lead">ما أستخدمه فعلًا في الدراسة والمشاريع، وما أتعلمه الآن — بلا قائمة تُجمع للعرض.</p>
+      </header>
+
+      <div class="strata">
+        <div class="stratum" data-reveal>
+          <span class="stratum-idx mono">01</span>
+          <h3 data-i18n="skills.ai.title">الذكاء الاصطناعي</h3>
+          <ul class="stratum-tags">
+            <li data-i18n="skills.ai.1">Prompt Engineering</li>
+            <li data-i18n="skills.ai.2">أدوات AI</li>
+            <li data-i18n="skills.ai.3">وكلاء AI</li>
+            <li data-i18n="skills.ai.4">أتمتة سير العمل</li>
+          </ul>
+        </div>
+        <div class="stratum" data-reveal>
+          <span class="stratum-idx mono">02</span>
+          <h3 data-i18n="skills.dev.title">التطوير</h3>
+          <ul class="stratum-tags">
+            <li data-i18n="skills.dev.1">OpenCode</li>
+            <li data-i18n="skills.dev.2">أساسيات C#</li>
+            <li class="is-learning" data-i18n="skills.dev.3">Python — قيد التعلّم</li>
+            <li class="is-learning" data-i18n="skills.dev.4">Git &amp; GitHub — قيد التعلّم</li>
+          </ul>
+        </div>
+        <div class="stratum" data-reveal>
+          <span class="stratum-idx mono">03</span>
+          <h3 data-i18n="skills.biz.title">الأعمال</h3>
+          <ul class="stratum-tags">
+            <li data-i18n="skills.biz.1">نظم المعلومات الإدارية</li>
+            <li data-i18n="skills.biz.2">إدارة المشاريع</li>
+            <li data-i18n="skills.biz.3">تحليل الأعمال</li>
+            <li data-i18n="skills.biz.4">ريادة الأعمال</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="craft" data-reveal>
+        <div class="craft-head">
+          <span class="mono craft-tag" data-i18n="craft.kicker">المهارة المركزية</span>
+          <h3 data-i18n="craft.title">هندسة التعليمات</h3>
+          <p data-i18n="craft.body">أكتب التعليمات كما أكتب متطلبًا: هدف واضح، سياق كافٍ، قيود صريحة، ومعيار للحكم على المخرج. هذا ما يجعل نتيجة الأداة قابلة للتكرار بدل أن تكون حظًا.</p>
+        </div>
+        <ol class="craft-steps">
+          <li><span class="mono">01</span><strong data-i18n="craft.s1.t">الهدف</strong><span data-i18n="craft.s1.d">ماذا نريد بالضبط</span></li>
+          <li><span class="mono">02</span><strong data-i18n="craft.s2.t">السياق والقيود</strong><span data-i18n="craft.s2.d">ما يجب الالتزام به</span></li>
+          <li><span class="mono">03</span><strong data-i18n="craft.s3.t">التقييم</strong><span data-i18n="craft.s3.d">كيف نحكم على المخرج</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ 04 · PROJECTS ══════════ -->
+  <section class="section section--work" id="projects">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <h2 data-i18n="work.title">ستة مشاريع، ست حالات.</h2>
+        <p class="lead" data-i18n="work.lead">كل مشروع هنا بحالته الصادقة: ما زال يُبنى، أو تجربة، أو خطة. ولا نتيجة واحدة لم تُقَس بعد.</p>
+      </header>
+
+      <!-- 01 -->
+      <article class="work work--panel" data-status="progress" data-reveal data-tilt>
+        <div class="work-top">
+          <span class="mono">01</span>
+          <span class="status status--progress" data-i18n="status.progress">قيد التطوير</span>
+        </div>
+        <div class="panel-body">
+          <div>
+            <h3 class="work-title"><bdi dir="ltr" lang="en">Qarmasha</bdi></h3>
+            <p class="work-type mono" data-i18n="work.qarmasha.type">نظام إدارة مطاعم</p>
+            <p class="work-desc" data-i18n="work.qarmasha.desc">نظام يجمع عمليات المطعم في مكان واحد: قائمة الأصناف، الطلبات، والمتابعة اليومية — لتقليل العمل اليدوي المتكرر.</p>
+          </div>
+          <div class="flow" aria-hidden="true">
+            <span class="flow-node" data-i18n="work.qarmasha.n1">القائمة</span>
+            <span class="flow-node" data-i18n="work.qarmasha.n2">الطلب</span>
+            <span class="flow-node" data-i18n="work.qarmasha.n3">المطبخ</span>
+            <span class="flow-node" data-i18n="work.qarmasha.n4">التقرير</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 -->
+      <article class="work work--split" data-status="progress" data-reveal data-tilt>
+        <div class="work-top">
+          <span class="mono">02</span>
+          <span class="status status--progress" data-i18n="status.progress">قيد التطوير</span>
+        </div>
+        <div class="split-body">
+          <div>
+            <h3 class="work-title" data-i18n="work.finance.name">تطبيق إدارة المالية الشخصية</h3>
+            <p class="work-type mono" data-i18n="work.finance.type">تطبيق شخصي</p>
+            <p class="work-desc" data-i18n="work.finance.desc">تنظيم الدخل والمصروفات ورؤية نمط الإنفاق بوضوح، بواجهة تُستخدم يوميًا دون تعقيد.</p>
+          </div>
+          <div class="balance" aria-hidden="true">
+            <div class="balance-row"><span class="mono">IN</span><span class="balance-bar" style="--w:82%"></span></div>
+            <div class="balance-row"><span class="mono">OUT</span><span class="balance-bar" style="--w:56%"></span></div>
+            <div class="balance-row"><span class="mono">NET</span><span class="balance-bar" style="--w:26%"></span></div>
+            <p class="balance-note mono" data-i18n="work.finance.note">مخطط توضيحي · لا بيانات فعلية</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 -->
+      <article class="work work--constellation" data-status="experimental" data-reveal data-tilt>
+        <div class="work-top">
+          <span class="mono">03</span>
+          <span class="status status--experimental" data-i18n="status.experimental">تجريبي</span>
+        </div>
+        <div class="constellation-body">
+          <div>
+            <h3 class="work-title" data-i18n="work.agents.name">مساحة عمل متعددة الوكلاء</h3>
+            <p class="work-type mono" data-i18n="work.agents.type">ذكاء اصطناعي</p>
+            <p class="work-desc" data-i18n="work.agents.desc">بيئة تجمع عدة وكلاء ذكاء اصطناعي يعملون على مهام متتابعة، لاختبار كيف يمكن تقسيم العمل بينهم بدل تنفيذه يدويًا.</p>
+          </div>
+          <svg class="constellation" viewBox="0 0 300 220" aria-hidden="true" focusable="false">
+            <g class="c-edges">
+              <path d="M60 60 L150 110" />
+              <path d="M240 60 L150 110" />
+              <path d="M60 170 L150 110" />
+              <path d="M240 170 L150 110" />
+              <path d="M150 110 L150 190" />
+            </g>
+            <g class="c-nodes">
+              <circle cx="60" cy="60" r="5" />
+              <circle cx="240" cy="60" r="5" />
+              <circle cx="60" cy="170" r="5" />
+              <circle cx="240" cy="170" r="5" />
+              <circle cx="150" cy="110" r="9" class="c-hub" />
+              <circle cx="150" cy="190" r="4" class="c-out" />
+            </g>
+          </svg>
+        </div>
+      </article>
+
+      <!-- 04 -->
+      <article class="work work--pipeline" data-status="progress" data-reveal data-tilt>
+        <div class="work-top">
+          <span class="mono">04</span>
+          <span class="status status--progress" data-i18n="status.progress">قيد التطوير</span>
+        </div>
+        <h3 class="work-title"><bdi dir="ltr" lang="en">AI Automation</bdi> <span class="work-slash">/</span> <bdi dir="ltr" lang="en">n8n</bdi></h3>
+        <p class="work-type mono" data-i18n="work.automation.type">أتمتة سير عمل</p>
+        <p class="work-desc" data-i18n="work.automation.desc">ربط الأدوات في سير عمل واحد: مشغّل، ثم معالجة بالذكاء الاصطناعي، ثم مراجعة بشرية، ثم إخراج — لتقليل الخطوات المتكررة.</p>
+        <ol class="pipeline" aria-hidden="true">
+          <li><span class="mono">01</span><span data-i18n="work.automation.s1">مُشغّل</span></li>
+          <li><span class="mono">02</span><span data-i18n="work.automation.s2">معالجة</span></li>
+          <li><span class="mono">03</span><span data-i18n="work.automation.s3">مراجعة</span></li>
+          <li><span class="mono">04</span><span data-i18n="work.automation.s4">إخراج</span></li>
+        </ol>
+      </article>
+
+      <!-- 05 -->
+      <article class="work work--marquee" data-status="experimental" data-reveal data-tilt>
+        <div class="work-top">
+          <span class="mono">05</span>
+          <span class="status status--experimental" data-i18n="status.experimental">تجريبي</span>
+        </div>
+        <h3 class="work-title" data-i18n="work.content.name">نظام إنتاج المحتوى</h3>
+        <p class="work-type mono" data-i18n="work.content.type">ذكاء اصطناعي</p>
+        <p class="work-desc" data-i18n="work.content.desc">منظومة تنظّم رحلة المحتوى: بحث، صياغة بمساعدة الذكاء الاصطناعي، ثم تحرير بشري — بلا خطوة عشوائية.</p>
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span data-i18n="work.content.m1">فكرة</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m2">بحث</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m3">صياغة</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m4">تحرير</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m1">فكرة</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m2">بحث</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m3">صياغة</span><span class="marquee-sep">←</span>
+            <span data-i18n="work.content.m4">تحرير</span><span class="marquee-sep">←</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 -->
+      <article class="work work--dossier" data-status="planning" data-reveal data-tilt>
+        <div class="work-top">
+          <span class="mono">06</span>
+          <span class="status status--planning" data-i18n="status.planning">تخطيط</span>
+        </div>
+        <div class="dossier-body">
+          <div>
+            <h3 class="work-title" data-i18n="work.dairy.name">مشروع إنتاج الألبان</h3>
+            <p class="work-type mono" data-i18n="work.dairy.type">مشروع أعمال</p>
+            <p class="work-desc" data-i18n="work.dairy.desc">مشروع أعمال في قطاع إنتاج الألبان: دراسة الفكرة والعمليات والجدوى، وربطها بأدوات إدارة واضحة قبل التنفيذ.</p>
+          </div>
+          <ul class="dossier-notes">
+            <li><span class="mono">01</span><span data-i18n="work.dairy.n1">الفكرة والسوق</span></li>
+            <li><span class="mono">02</span><span data-i18n="work.dairy.n2">العمليات</span></li>
+            <li><span class="mono">03</span><span data-i18n="work.dairy.n3">الجدوى</span></li>
+            <li><span class="mono">04</span><span data-i18n="work.dairy.n4">خطة التنفيذ</span></li>
+          </ul>
+        </div>
+      </article>
+
+      <ul class="legend mono" aria-label="دلالات الحالة" data-i18n-aria="legend.label">
+        <li><span class="status status--done" data-i18n="status.done">مُنجَز</span></li>
+        <li><span class="status status--progress" data-i18n="status.progress">قيد التطوير</span></li>
+        <li><span class="status status--experimental" data-i18n="status.experimental">تجريبي</span></li>
+        <li><span class="status status--planning" data-i18n="status.planning">تخطيط</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════ 05 · EXPERIENCE ══════════ -->
+  <section class="section section--log" id="experience">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <h2 data-i18n="experience.title">السجل</h2>
+        <p class="lead" data-i18n="experience.lead">عمل مستقل ومبادرات شخصية، تُبنى بالتوازي مع الدراسة.</p>
+      </header>
+
+      <ol class="log">
+        <li class="log-row" data-reveal>
+          <span class="log-when mono" data-i18n="experience.e1.period">مستمر</span>
+          <div class="log-body">
+            <h3 data-i18n="experience.e1.title">بناء مشاريع رقمية مستقلة</h3>
+            <p data-i18n="experience.e1.desc">تطوير مشاريع تجمع بين إدارة المشاريع والتقنية والذكاء الاصطناعي: من تحديد الفكرة وترتيب المتطلبات إلى التنفيذ والمراجعة.</p>
+          </div>
+          <span class="log-tag mono" data-i18n="experience.e1.tag">عمل شخصي</span>
+        </li>
+        <!-- قالب لإضافة خبرة حقيقية:
+        <li class="log-row" data-reveal>
+          <span class="log-when mono">2026 — 2027</span>
+          <div class="log-body"><h3>المسمى الوظيفي</h3><p>وصف قصير لدورك وما نفّذته فعلًا.</p></div>
+          <span class="log-tag mono">دوام / تدريب</span>
+        </li>
+        -->
+      </ol>
+      <p class="note" data-i18n="experience.note">هذا القسم للخبرات العملية فقط: وظيفة، تدريب، أو عمل حر. لا شيء غير حقيقي يُضاف هنا.</p>
+    </div>
+  </section>
+
+  <!-- ══════════ 06 · EDUCATION ══════════ -->
+  <section class="section section--edu" id="education">
+    <div class="wrap">
+      <header class="section-head" data-reveal>
+        <h2 data-i18n="education.title">التعليم والشهادات</h2>
+        <p class="lead" data-i18n="education.lead">الأساس الأكاديمي والتدريب الذي أبني عليه.</p>
+      </header>
+
+      <ul class="edu">
+        <li data-reveal>
+          <span class="edu-idx mono">01</span>
+          <div class="edu-main">
+            <h3 data-i18n="edu.1.title">نظم المعلومات الإدارية (MIS)</h3>
+            <p data-i18n="edu.1.desc">دراسة جامعية تربط إدارة الأعمال بأنظمة المعلومات.</p>
+          </div>
+          <span class="edu-type mono" data-i18n="edu.1.type">جامعي</span>
+        </li>
+        <li data-reveal>
+          <span class="edu-idx mono">02</span>
+          <div class="edu-main">
+            <h3 data-i18n="edu.2.title">دراسات إدارة المشاريع</h3>
+            <p data-i18n="edu.2.desc">أساسيات تخطيط المشروع ونطاقه وجدوله ومتابعته.</p>
+          </div>
+          <span class="edu-type mono" data-i18n="edu.2.type">دراسة</span>
+        </li>
+        <li data-reveal>
+          <span class="edu-idx mono">03</span>
+          <div class="edu-main">
+            <h3><bdi dir="ltr" lang="en">IBM</bdi> · <span data-i18n="edu.3.title">هندسة التعليمات</span></h3>
+            <p data-i18n="edu.3.desc">تدريب على صياغة التعليمات وتقييم مخرجات النماذج.</p>
+          </div>
+          <span class="edu-type mono" data-i18n="edu.3.type">شهادة</span>
+        </li>
+        <li data-reveal>
+          <span class="edu-idx mono">04</span>
+          <div class="edu-main">
+            <h3><bdi dir="ltr" lang="en">Edraak</bdi> · <span data-i18n="edu.4.title">أساسيات الذكاء الاصطناعي</span></h3>
+            <p data-i18n="edu.4.desc">مدخل إلى مفاهيم الذكاء الاصطناعي وتطبيقاته.</p>
+          </div>
+          <span class="edu-type mono" data-i18n="edu.4.type">شهادة</span>
+        </li>
+        <li data-reveal>
+          <span class="edu-idx mono">05</span>
+          <div class="edu-main">
+            <h3 data-i18n="edu.5.title">معسكر إدارة المشاريع والذكاء الاصطناعي</h3>
+            <p data-i18n="edu.5.desc">تدريب مكثّف يجمع أدوات إدارة المشروع مع تطبيقات الذكاء الاصطناعي.</p>
+          </div>
+          <span class="edu-type mono" data-i18n="edu.5.type">تدريب</span>
+        </li>
+        <li data-reveal>
+          <span class="edu-idx mono">06</span>
+          <div class="edu-main">
+            <h3><span data-i18n="edu.6.title">دراسة اللغة الإنجليزية</span> · <bdi dir="ltr" lang="en">Kaizen Institute</bdi></h3>
+            <p data-i18n="edu.6.desc">تطوير مهارات اللغة الإنجليزية الأكاديمية والمهنية.</p>
+          </div>
+          <span class="edu-type mono" data-i18n="edu.6.type">دراسة</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ══════════ 07 · CONTACT ══════════ -->
+  <section class="section section--contact" id="contact">
+    <div class="wrap">
+      <p class="contact-kicker mono" data-i18n="contact.kicker">الباب مفتوح</p>
+      <h2 class="contact-title" data-i18n="contact.title">لنتحدث.</h2>
+      <p class="contact-lead" data-i18n="contact.lead">للفرص، التعاون في المشاريع، أو نقاش تقني — البريد أسرع طريق.</p>
+
+      <div class="contact-mail-row">
+        <a class="mega-mail latin" href="mailto:mnjalhabshim633@gmail.com" dir="ltr">mnjalhabshim633@gmail.com</a>
+        <button type="button" class="copy-btn" data-copy="mnjalhabshim633@gmail.com" data-i18n="contact.copy">نسخ البريد</button>
+      </div>
+
+      <ul class="contact-links">
+        <li><a href="https://github.com/modealex6" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+        <li><span class="link-pending">LinkedIn <span class="mono" data-i18n="contact.pending">قيد الإضافة</span></span></li>
+        <li><span class="link-pending"><span data-i18n="contact.cv">السيرة الذاتية</span> <span class="mono" data-i18n="contact.pending">قيد الإضافة</span></span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p><bdi dir="ltr" class="latin">© 2026</bdi> <span data-i18n="footer.name">محمد نبيل</span></p>
+    <p class="mono footer-build" data-i18n="footer.build">بُني بـ HTML · CSS · JS</p>
+    <p class="mono footer-time"><span data-i18n="footer.local">اليمن</span> <span id="clock" dir="ltr">--:--</span></p>
+    <a class="to-top mono" href="#home" data-i18n="footer.top">إلى الأعلى ↑</a>
+  </div>
+</footer>
+
+<div class="rail" aria-hidden="true">
+  <span class="rail-idx mono" id="railIdx">01</span>
+  <span class="rail-line"><span class="rail-fill" id="railFill"></span></span>
+  <span class="rail-name" id="railName">الرئيسية</span>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="content/en.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
