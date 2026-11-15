@@ -1,5 +1,7 @@
 # Portfolio — محمد نبيل
 
+**الرابط العام:** https://modealex6.github.io/portfolio/ (GitHub Pages، المستودع `modealex6/portfolio`)
+
 موقع شخصي بصفحة واحدة: عربي RTL افتراضيًا مع تبديل كامل للإنجليزية. HTML + CSS + JavaScript بلا أي إطار عمل أو خدمة خارجية، وبلا خطوة بناء.
 
 ## التشغيل
@@ -48,19 +50,17 @@ brief.md  design.md  launch-checklist.md
 - [ ] حالة كل مشروع: تأكد أنها تعكس الواقع (`data-status` + نص الحالة في اللغتين).
 - [ ] `og:image` عند النشر.
 
-## النشر (GitHub Pages)
-كل الروابط نسبية، لذا يعمل الموقع تحت أي مسار فرعي.
+## النشر (تم)
+الموقع منشور على GitHub Pages من هذا المستودع نفسه (`modealex6/portfolio`، فرع `main`، جذر المستودع):
+**https://modealex6.github.io/portfolio/**
 
 ```powershell
 cd portfolio
-git init -b main
 git add .
-git commit -m "Portfolio v2"
-git remote add origin https://github.com/modealex6/<repo>.git
-git push -u origin main
+git commit -m "…"
+git push
 ```
-ثم Settings → Pages → Source: Deploy from a branch → `main` / `/ (root)`.
-الرابط: `https://modealex6.github.io/<repo>/`.
+كل دفعة إلى `main` تُعيد النشر تلقائيًا خلال دقيقة تقريبًا.
 
 بدائل: Cloudflare Pages أو Netlify — اسحب المجلد كما هو.
 
