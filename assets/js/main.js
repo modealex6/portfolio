@@ -17,6 +17,12 @@
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   var finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
+  /* Safari < 14 has no addEventListener on MediaQueryList. */
+  var onMediaChange = function (mq, fn) {
+    if (mq.addEventListener) mq.addEventListener("change", fn);
+    else if (mq.addListener) mq.addListener(fn);
+  };
+
   var slice = function (list) {
     return Array.prototype.slice.call(list);
   };
@@ -272,7 +278,9 @@
     var running = false;
 
     var resize = function () {
-      dpr = Math.min(window.devicePixelRatio || 1, 1.75);
+      /* Phones get a lighter buffer: fewer pixels to paint every frame. */
+      var cap = canvas.clientWidth < 720 ? 1.5 : 1.75;
+      dpr = Math.min(window.devicePixelRatio || 1, cap);
       width = canvas.clientWidth;
       height = canvas.clientHeight;
       canvas.width = Math.round(width * dpr);
@@ -355,7 +363,7 @@
     };
 
     var start = function () {
-      if (running || reduceMotion.matches) return;
+      if (running || reduceMotion.matches || !width) return;
       running = true;
       frame = 0;
       window.requestAnimationFrame(loop);
@@ -365,9 +373,24 @@
       running = false;
     };
 
+    /* Stop painting entirely once the hero has scrolled away. */
+    var heroOnScreen = true;
+
     resize();
     if (!reduceMotion.matches) start();
 
+    if ("IntersectionObserver" in window) {
+      var heroEl = doc.querySelector(".hero");
+      if (heroEl) {
+        new IntersectionObserver(function (entries) {
+          heroOnScreen = entries[0].isIntersecting;
+          if (heroOnScreen) start();
+          else stop();
+        }).observe(heroEl);
+      }
+    }
+
+    var lastW = 0;
     var resizeTick = false;
     window.addEventListener(
       "resize",
@@ -375,7 +398,12 @@
         if (resizeTick) return;
         resizeTick = true;
         window.requestAnimationFrame(function () {
-          resize();
+          /* Mobile URL bar show/hide only changes the height — skip the rebuild
+             so scrolling stays smooth. */
+          if (canvas.clientWidth !== lastW) {
+            lastW = canvas.clientWidth;
+            resize();
+          }
           resizeTick = false;
         });
       },
@@ -384,10 +412,10 @@
 
     doc.addEventListener("visibilitychange", function () {
       if (doc.hidden) stop();
-      else start();
+      else if (heroOnScreen) start();
     });
 
-    reduceMotion.addEventListener("change", function () {
+    onMediaChange(reduceMotion, function () {
       if (reduceMotion.matches) {
         stop();
         draw(0, true);
