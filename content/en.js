@@ -225,6 +225,9 @@ window.PORTFOLIO_EN = {
     copy: "Copy email",
     pending: "Coming soon",
     cv: "Resume",
+    pdfAr: "Arabic",
+    pdfEn: "English",
+    pdfLabel: "PDF",
   },
 
   footer: {
